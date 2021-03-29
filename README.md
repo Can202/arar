@@ -1,9 +1,6 @@
 # arar
 Arar, an Android Game to 2 Players
 
-Nothing yet
-
-
 I Started a Game to mobile simple, but i didn't post anything until the 0.6 Version
 
 Before GitHub:
