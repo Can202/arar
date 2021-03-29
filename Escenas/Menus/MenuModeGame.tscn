@@ -1,0 +1,364 @@
+[gd_scene load_steps=28 format=2]
+
+[ext_resource path="res://Textures/bg.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Menus/MenuModeGame.gd" type="Script" id=2]
+[ext_resource path="res://Font/pixeled/Pixeled.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Textures/Black.png" type="Texture" id=4]
+[ext_resource path="res://Music/Music3.ogg" type="AudioStream" id=5]
+[ext_resource path="res://Escenas/SFX/SFX.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Textures/restart.png" type="Texture" id=7]
+[ext_resource path="res://Textures/restartright.png" type="Texture" id=8]
+[ext_resource path="res://Textures/best.png" type="Texture" id=9]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+[sub_resource type="RectangleShape2D" id=2]
+
+[sub_resource type="Animation" id=3]
+resource_name = "15s byL"
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Choose:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.19, 0.202 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 450, 0 ), Vector2( -1407, 0 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "15s byR"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Choose:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -900, 0 ), Vector2( -1407, 0 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "1m byL"
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Choose:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -450, 0 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "1m byR"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Choose:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.19, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1407, 0 ), Vector2( -1800, 0 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "5m byL"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Choose:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -900, 0 ), Vector2( -450, 0 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "5m byL"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Choose:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( -450, 0 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "5s byL"
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Choose:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1407, 0 ), Vector2( -900, 0 ) ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "5s byR"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Choose:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -450, 0 ), Vector2( -900, 0 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 64, 33 )
+
+[sub_resource type="DynamicFont" id=12]
+font_data = ExtResource( 3 )
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 64, 33 )
+
+[sub_resource type="RectangleShape2D" id=14]
+
+[sub_resource type="Animation" id=15]
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1, 0.2, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=16]
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=17]
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=18]
+resource_name = "anim"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Choose/1m/Sprite:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.7, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 5.0, -5.0, 0.0 ]
+}
+
+[node name="MMG" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="fondo" type="Sprite" parent="."]
+position = Vector2( 968, -120 )
+scale = Vector2( 3.95175, 3.95175 )
+texture = ExtResource( 1 )
+
+[node name="ModeChoose" type="Node2D" parent="."]
+
+[node name="left" type="TouchScreenButton" parent="ModeChoose"]
+position = Vector2( 64, 128 )
+scale = Vector2( 4, 4 )
+normal = ExtResource( 7 )
+shape = SubResource( 1 )
+
+[node name="right" type="TouchScreenButton" parent="ModeChoose"]
+position = Vector2( 384, 128 )
+scale = Vector2( 4, 4 )
+normal = ExtResource( 8 )
+shape = SubResource( 2 )
+
+[node name="choosean" type="AnimationPlayer" parent="ModeChoose"]
+"anims/15s byL" = SubResource( 3 )
+"anims/15s byR" = SubResource( 4 )
+"anims/1m byL" = SubResource( 5 )
+"anims/1m byR" = SubResource( 6 )
+"anims/5m byL" = SubResource( 7 )
+"anims/5m byR" = SubResource( 8 )
+"anims/5s byL" = SubResource( 9 )
+"anims/5s byR" = SubResource( 10 )
+
+[node name="Choose" type="Node2D" parent="."]
+
+[node name="1m" type="TouchScreenButton" parent="Choose"]
+position = Vector2( 192, 128 )
+shape = SubResource( 11 )
+
+[node name="Label" type="Label" parent="Choose/1m"]
+margin_right = 128.0
+margin_bottom = 64.0
+custom_fonts/font = SubResource( 12 )
+text = "1 min"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="1m" type="VisibilityNotifier2D" parent="Choose/1m"]
+
+[node name="Sprite" type="Sprite" parent="Choose/1m"]
+position = Vector2( 61.5714, -22 )
+rotation = 0.0855877
+scale = Vector2( 4.16071, 4.16071 )
+texture = ExtResource( 9 )
+
+[node name="5m" type="TouchScreenButton" parent="Choose"]
+position = Vector2( 640, 128 )
+shape = SubResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="Choose/5m"]
+margin_right = 128.0
+margin_bottom = 64.0
+custom_fonts/font = SubResource( 12 )
+text = "5 min"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="5m" type="VisibilityNotifier2D" parent="Choose/5m"]
+
+[node name="5s" type="TouchScreenButton" parent="Choose"]
+position = Vector2( 1088, 128 )
+shape = SubResource( 13 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="Choose/5s"]
+margin_right = 128.0
+margin_bottom = 64.0
+custom_fonts/font = SubResource( 12 )
+text = "  5  Score"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="5s" type="VisibilityNotifier2D" parent="Choose/5s"]
+
+[node name="15s" type="TouchScreenButton" parent="Choose"]
+position = Vector2( 1600, 128 )
+shape = SubResource( 13 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="Choose/15s"]
+margin_right = 128.0
+margin_bottom = 64.0
+custom_fonts/font = SubResource( 12 )
+text = " 15  Score"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="15s" type="VisibilityNotifier2D" parent="Choose/15s"]
+
+[node name="back" type="TouchScreenButton" parent="."]
+scale = Vector2( 2, 2 )
+normal = ExtResource( 7 )
+shape = SubResource( 14 )
+
+[node name="black" type="Sprite" parent="."]
+visible = false
+position = Vector2( 292, 172 )
+scale = Vector2( 10.125, 6.375 )
+texture = ExtResource( 4 )
+
+[node name="start" type="AnimationPlayer" parent="black"]
+anims/anim = SubResource( 15 )
+
+[node name="end" type="AnimationPlayer" parent="black"]
+anims/anim = SubResource( 16 )
+
+[node name="end2" type="AnimationPlayer" parent="black"]
+anims/anim = SubResource( 17 )
+
+[node name="music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 5 )
+
+[node name="SFX" parent="." instance=ExtResource( 6 )]
+
+[node name="animate" type="AnimationPlayer" parent="."]
+anims/anim = SubResource( 18 )
+[connection signal="pressed" from="ModeChoose/left" to="." method="_on_left_pressed"]
+[connection signal="pressed" from="ModeChoose/right" to="." method="_on_right_pressed"]
+[connection signal="pressed" from="Choose/1m" to="." method="_on_1m_pressed"]
+[connection signal="screen_entered" from="Choose/1m/1m" to="." method="_on_1m_screen_entered"]
+[connection signal="pressed" from="Choose/5m" to="." method="_on_5m_pressed"]
+[connection signal="screen_entered" from="Choose/5m/5m" to="." method="_on_5m_screen_entered"]
+[connection signal="pressed" from="Choose/5s" to="." method="_on_5s_pressed"]
+[connection signal="screen_entered" from="Choose/5s/5s" to="." method="_on_5s_screen_entered"]
+[connection signal="pressed" from="Choose/15s" to="." method="_on_15s_pressed"]
+[connection signal="screen_entered" from="Choose/15s/15s" to="." method="_on_15s_screen_entered"]
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]
+[connection signal="animation_finished" from="black/end" to="." method="_on_end_animation_finished"]
+[connection signal="animation_finished" from="black/end2" to="." method="_on_end2_animation_finished"]

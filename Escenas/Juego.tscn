@@ -1,0 +1,477 @@
+[gd_scene load_steps=42 format=2]
+
+[ext_resource path="res://Textures/g.png" type="Texture" id=1]
+[ext_resource path="res://Escenas/aro.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Textures/RedButton.png" type="Texture" id=3]
+[ext_resource path="res://Textures/r3.png" type="Texture" id=4]
+[ext_resource path="res://Scripts/Game/Juego.gd" type="Script" id=7]
+[ext_resource path="res://Textures/BlueButton.png" type="Texture" id=8]
+[ext_resource path="res://Textures/BlueButton_pressed.png" type="Texture" id=9]
+[ext_resource path="res://Textures/RedButton_pressed.png" type="Texture" id=10]
+[ext_resource path="res://Textures/bg.png" type="Texture" id=11]
+[ext_resource path="res://Font/pixeled/Pixeled.ttf" type="DynamicFontData" id=12]
+[ext_resource path="res://Textures/Black.png" type="Texture" id=13]
+[ext_resource path="res://Scripts/Menus/pausa.gd" type="Script" id=14]
+[ext_resource path="res://Textures/menu.png" type="Texture" id=15]
+[ext_resource path="res://Textures/exit.png" type="Texture" id=16]
+[ext_resource path="res://Textures/music.png" type="Texture" id=17]
+[ext_resource path="res://Textures/fx.png" type="Texture" id=18]
+[ext_resource path="res://Textures/restart.png" type="Texture" id=19]
+[ext_resource path="res://Music/Music1.wav" type="AudioStream" id=20]
+[ext_resource path="res://Escenas/SFX/SFX.tscn" type="PackedScene" id=21]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 2.17232
+height = 38.2286
+
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 9.10106
+height = 24.9725
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "normal",
+"speed": 20.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 73.4001, 2.62866 )
+
+[sub_resource type="RectangleShape2D" id=6]
+
+[sub_resource type="RectangleShape2D" id=7]
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 152, 24 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 263.86, 30.3732 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 46.5574, 10 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 165.358, 10 )
+
+[sub_resource type="Curve2D" id=12]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 512, 0, 0, 0, 0, 0, 0, 0 )
+}
+
+[sub_resource type="DynamicFont" id=13]
+font_data = ExtResource( 12 )
+
+[sub_resource type="DynamicFont" id=14]
+font_data = ExtResource( 12 )
+
+[sub_resource type="DynamicFont" id=15]
+size = 12
+font_data = ExtResource( 12 )
+
+[sub_resource type="Animation" id=16]
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.2, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=17]
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=18]
+
+[sub_resource type="RectangleShape2D" id=19]
+extents = Vector2( 5, 5 )
+
+[sub_resource type="RectangleShape2D" id=20]
+extents = Vector2( 5, 5 )
+
+[sub_resource type="RectangleShape2D" id=21]
+extents = Vector2( 5, 5 )
+
+[sub_resource type="RectangleShape2D" id=22]
+extents = Vector2( 5, 5 )
+
+[node name="Juego" type="Node2D"]
+script = ExtResource( 7 )
+aro = ExtResource( 2 )
+
+[node name="fondo" type="Sprite" parent="."]
+position = Vector2( 1375, -269.728 )
+scale = Vector2( 5.50138, 5.50138 )
+texture = ExtResource( 11 )
+
+[node name="Blue" type="StaticBody2D" parent="." groups=[
+"bluepa",
+"pa",
+]]
+position = Vector2( 288, 104 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Blue"]
+position = Vector2( 0.981689, -0.00418854 )
+scale = Vector2( 3, 3 )
+frames = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blue"]
+position = Vector2( -0.899765, 1.11069 )
+rotation = 0.811578
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Red" type="StaticBody2D" parent="." groups=[
+"pa",
+"redpa",
+]]
+position = Vector2( 224, 104 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Red"]
+position = Vector2( 0.840912, 0 )
+scale = Vector2( 3, 3 )
+frames = SubResource( 1 )
+flip_h = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Red"]
+position = Vector2( 1.33786, 2.45273 )
+rotation = 2.43299
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="protector" type="StaticBody2D" parent="."]
+position = Vector2( 256, 88 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="protector"]
+position = Vector2( 28.5962, 20.9498 )
+rotation = 0.698132
+shape = SubResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="protector"]
+position = Vector2( -26.9602, 21.5251 )
+rotation = -0.788889
+shape = SubResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="protector"]
+polygon = PoolVector2Array( -41.3202, 1.34836, -31.0671, 4.70712, -41.6737, 12.4853 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="protector"]
+position = Vector2( 77.0746, -0.707108 )
+polygon = PoolVector2Array( -44.8557, 4.53033, -36.3704, 1.17159, -41.6737, 12.4853 )
+
+[node name="aro" type="Node2D" parent="."]
+
+[node name="blueh" type="StaticBody2D" parent="." groups=[
+"blue",
+"h",
+]]
+position = Vector2( 392, 144 )
+scale = Vector2( 2, 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="blueh"]
+position = Vector2( -0.943878, 0 )
+rotation = -0.541052
+scale = Vector2( 2.5, 2.5 )
+frames = SubResource( 4 )
+animation = "normal"
+playing = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="blueh"]
+position = Vector2( 5.24016, 7.6393 )
+rotation = -0.558505
+shape = SubResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="redh" type="StaticBody2D" parent="." groups=[
+"h",
+"red",
+]]
+position = Vector2( 112, 152 )
+scale = Vector2( 2, 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="redh"]
+position = Vector2( 5.15906, -3.96849 )
+rotation = 0.541052
+scale = Vector2( 2.5, 2.5 )
+frames = SubResource( 4 )
+animation = "click"
+frame = 4
+playing = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="redh"]
+position = Vector2( -0.63826, 1.66628 )
+rotation = 0.558505
+shape = SubResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="bluebutton" type="TouchScreenButton" parent="."]
+position = Vector2( 448, 216 )
+scale = Vector2( 3.5, 3.5 )
+normal = ExtResource( 8 )
+pressed = ExtResource( 9 )
+shape = SubResource( 6 )
+
+[node name="redbutton" type="TouchScreenButton" parent="."]
+position = Vector2( 8, 216 )
+scale = Vector2( 3.5, 3.5 )
+normal = ExtResource( 3 )
+pressed = ExtResource( 10 )
+shape = SubResource( 7 )
+
+[node name="htimerblue" type="Timer" parent="."]
+
+[node name="htimerred" type="Timer" parent="."]
+
+[node name="paredes" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="paredes"]
+polygon = PoolVector2Array( 88, -8, 520, -8, 511.102, 288.465, -0.646973, 287.534, -8, -8, 72, -8, 88, -8, 63.0984, -69.9342, -55.7024, -53.9161, -66.0534, 348.184, 541.306, 313.005, 540.363, -21.1262, 38.3415, -57.3069 )
+
+[node name="killarea" type="Area2D" parent="." groups=[
+"killarea",
+]]
+position = Vector2( 256, 280 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killarea"]
+position = Vector2( -3.05176e-05, 8 )
+shape = SubResource( 8 )
+
+[node name="Help" type="Area2D" parent="." groups=[
+"help",
+]]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Help"]
+polygon = PoolVector2Array( 512, 64, 256, 224, 0, 56, -32, 72, -24, 104, 256, 256, 528, 96 )
+
+[node name="exit" type="Area2D" parent="." groups=[
+"exit",
+]]
+position = Vector2( 256, 232 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="exit"]
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 0.14006, 5.34988 )
+shape = SubResource( 9 )
+
+[node name="exit2" type="Area2D" parent="." groups=[
+"exit2",
+]]
+position = Vector2( 256, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="exit2"]
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 0.14006, 5.34988 )
+shape = SubResource( 9 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="2" type="CollisionShape2D" parent="exit2"]
+position = Vector2( 0, 128 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="exit2"]
+position = Vector2( 0, 80 )
+shape = SubResource( 11 )
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource( 12 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2( 512, 0 )
+rotation = 3.14159
+
+[node name="timetospawn" type="Timer" parent="Path2D"]
+
+[node name="Control" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="redscore" type="Label" parent="Control"]
+margin_left = 200.0
+margin_top = 8.0
+margin_right = 232.0
+margin_bottom = 54.0
+custom_fonts/font = SubResource( 13 )
+text = "0"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bluescore" type="Label" parent="Control"]
+margin_left = 280.0
+margin_top = 8.0
+margin_right = 312.0
+margin_bottom = 54.0
+custom_fonts/font = SubResource( 14 )
+text = "0"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="timeorscore" type="Label" parent="Control"]
+margin_left = 232.0
+margin_right = 280.0
+margin_bottom = 35.0
+custom_fonts/font = SubResource( 15 )
+text = "000"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Canvas2" type="CanvasLayer" parent="."]
+
+[node name="black" type="Sprite" parent="Canvas2"]
+visible = false
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 258.801, 149.907 )
+scale = Vector2( 9.08753, 5.68458 )
+texture = ExtResource( 13 )
+
+[node name="Animation" type="AnimationPlayer" parent="Canvas2/black"]
+anims/anim = SubResource( 16 )
+
+[node name="Animation2" type="AnimationPlayer" parent="Canvas2/black"]
+anims/anim = SubResource( 17 )
+
+[node name="Canvas" type="CanvasLayer" parent="."]
+
+[node name="pausa" type="Node2D" parent="Canvas"]
+pause_mode = 2
+script = ExtResource( 14 )
+
+[node name="Pause" type="TouchScreenButton" parent="Canvas/pausa"]
+pause_mode = 2
+scale = Vector2( 2, 2 )
+normal = ExtResource( 15 )
+shape = SubResource( 18 )
+
+[node name="back" type="Sprite" parent="Canvas/pausa"]
+pause_mode = 2
+position = Vector2( 256, 128 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 13 )
+
+[node name="Music" type="TouchScreenButton" parent="Canvas/pausa/back"]
+position = Vector2( -4, -32 )
+scale = Vector2( 2.25, 2.25 )
+normal = ExtResource( 17 )
+shape = SubResource( 19 )
+
+[node name="x" type="Sprite" parent="Canvas/pausa/back/Music"]
+visible = false
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 8, 8 )
+texture = ExtResource( 16 )
+
+[node name="MainMenu" type="TouchScreenButton" parent="Canvas/pausa/back"]
+position = Vector2( -4, -4 )
+scale = Vector2( 2.25, 2.25 )
+normal = ExtResource( 16 )
+shape = SubResource( 20 )
+
+[node name="FX" type="TouchScreenButton" parent="Canvas/pausa/back"]
+pause_mode = 2
+position = Vector2( -31.6031, -31.4047 )
+scale = Vector2( 2.25, 2.25 )
+normal = ExtResource( 18 )
+shape = SubResource( 21 )
+
+[node name="x" type="Sprite" parent="Canvas/pausa/back/FX"]
+pause_mode = 2
+visible = false
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 8.04582, 8.04583 )
+texture = ExtResource( 16 )
+
+[node name="Restart" type="TouchScreenButton" parent="Canvas/pausa/back"]
+position = Vector2( -32, -4 )
+scale = Vector2( 2.25, 2.25 )
+normal = ExtResource( 19 )
+shape = SubResource( 22 )
+
+[node name="SFX" parent="Canvas/pausa" instance=ExtResource( 21 )]
+pause_mode = 2
+
+[node name="Music" type="Node" parent="."]
+
+[node name="Music" type="AudioStreamPlayer2D" parent="Music"]
+pause_mode = 2
+position = Vector2( 256, 128 )
+stream = ExtResource( 20 )
+
+[node name="Time" type="Timer" parent="."]
+
+[node name="SFX" parent="." instance=ExtResource( 21 )]
+[connection signal="pressed" from="bluebutton" to="." method="_on_bluebutton_pressed"]
+[connection signal="pressed" from="redbutton" to="." method="_on_redbutton_pressed"]
+[connection signal="timeout" from="htimerblue" to="." method="_on_htimerblue_timeout"]
+[connection signal="timeout" from="htimerred" to="." method="_on_htimerred_timeout"]
+[connection signal="timeout" from="Path2D/timetospawn" to="." method="_on_timetospawn_timeout"]
+[connection signal="animation_finished" from="Canvas2/black/Animation2" to="." method="_on_Animation2_animation_finished"]
+[connection signal="pressed" from="Canvas/pausa/Pause" to="Canvas/pausa" method="_on_Pause_pressed"]
+[connection signal="pressed" from="Canvas/pausa/back/Music" to="." method="_on_Music_pressed"]
+[connection signal="pressed" from="Canvas/pausa/back/MainMenu" to="Canvas/pausa" method="_on_MainMenu_pressed"]
+[connection signal="pressed" from="Canvas/pausa/back/FX" to="Canvas/pausa" method="_on_FX_pressed"]
+[connection signal="pressed" from="Canvas/pausa/back/Restart" to="Canvas/pausa" method="_on_Restart_pressed"]
+[connection signal="finished" from="Music/Music" to="." method="_on_Music_finished"]
+[connection signal="timeout" from="Time" to="." method="_on_Time_timeout"]
