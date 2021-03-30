@@ -54,3 +54,7 @@ Start on Github:
 March 29th:
 
 -Arar v0.6
+
+March 30th:
+
+-Arar v0.6.1
