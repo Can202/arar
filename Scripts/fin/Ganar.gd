@@ -44,6 +44,17 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	
+	if Glovar.VolumeFX == true:
+		if $start.current_animation_position >= 1.5 and $start.current_animation_position <= 1.53:
+			$SFX/suash.play()
+		if $start.current_animation_position >= 3 and $start.current_animation_position <= 3.1:
+			$SFX/suash.play()
+		if $start.current_animation_position >= 4.5 and $start.current_animation_position <= 4.53:
+			$SFX/suash.play()
+		if $start.current_animation_position >= 5.7 and $start.current_animation_position <= 5.73:
+			$SFX/suash.play()
+	
+	
 	if speedpressed == true:
 		$start.playback_speed = 9
 	else:

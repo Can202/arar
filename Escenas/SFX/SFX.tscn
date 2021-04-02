@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://SFX/fx7.wav" type="AudioStream" id=1]
 [ext_resource path="res://SFX/fx2.wav" type="AudioStream" id=2]
 [ext_resource path="res://SFX/fx1.wav" type="AudioStream" id=3]
 [ext_resource path="res://SFX/fx3.wav" type="AudioStream" id=4]
 [ext_resource path="res://SFX/fx5.wav" type="AudioStream" id=5]
+[ext_resource path="res://SFX/fx8.wav" type="AudioStream" id=6]
 
 [node name="SFX" type="Node2D"]
 
@@ -22,8 +23,13 @@ volume_db = -15.0
 
 [node name="movewater" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 4 )
-volume_db = -20.0
+volume_db = -30.0
 
 [node name="toc" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 5 )
 volume_db = -20.0
+
+[node name="suash" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 6 )
+volume_db = -20.0
+pitch_scale = 2.23
