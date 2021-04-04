@@ -2,6 +2,5 @@ body {
   background-color: skyblue;
   background-image: url("back.png");
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-size: cover;
 }
