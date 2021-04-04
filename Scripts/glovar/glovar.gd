@@ -9,6 +9,7 @@ var htimerblue = false
 var htimerred = false
 var VolumeMusic = true
 var VolumeFX = true
+var Volumesavebug01 = Vector2(1,1)
 var win = 0 # 0 empate, 1 red, 2 blue
 var Exit = false
 

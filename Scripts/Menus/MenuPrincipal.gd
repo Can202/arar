@@ -9,6 +9,7 @@ var Open = false
 var firstsave = false
 var datacom = {}
 var infos = 0
+var volumesave = false
 
 
 # Called when the node enters the scene tree for the first time.
@@ -19,12 +20,35 @@ func _ready():
 		Glovar.Score = Glovar.ScoreBlue + Glovar.ScoreRed
 		Glovar.ScoreMega += Glovar.Score
 		data["Score"] = Glovar.ScoreMega
+		if Glovar.VolumeMusic == true:
+			Glovar.Volumesavebug01.x = 1
+		else:
+			Glovar.Volumesavebug01.x = 0
+		if Glovar.VolumeFX == true:
+			Glovar.Volumesavebug01.y = 1
+		else:
+			Glovar.Volumesavebug01.y = 0
+		data["VolumeMusic"] = Glovar.Volumesavebug01.x
+		data["VolumeFX"] = Glovar.Volumesavebug01.y
 		$NG/Guardar.save_data()
 		
+	if data.has("VolumeMusic") == true:
+		volumesave = true
 	if data.empty():
 		pass
 	else:
 		Glovar.ScoreMega = data["Score"]
+		if volumesave == true:
+			Glovar.Volumesavebug01.x = data["VolumeMusic"]
+			Glovar.Volumesavebug01.y = data["VolumeFX"]
+		if Glovar.Volumesavebug01.x == 1:
+			Glovar.VolumeMusic = true
+		else:
+			Glovar.VolumeMusic = false
+		if Glovar.Volumesavebug01.y == 1:
+			Glovar.VolumeFX = true
+		else:
+			Glovar.VolumeFX = false
 	
 	#Fin
 	if Glovar.soundinpause == true and Glovar.VolumeFX == true:

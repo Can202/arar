@@ -19,6 +19,16 @@ func _ready():
 	#Guardar
 	var data = $NG/Guardar.get_data()
 	data["Score"] = Glovar.ScoreMega
+	if Glovar.VolumeMusic == true:
+		Glovar.Volumesavebug01.x = 1
+	else:
+		Glovar.Volumesavebug01.x = 0
+	if Glovar.VolumeFX == true:
+		Glovar.Volumesavebug01.y = 1
+	else:
+		Glovar.Volumesavebug01.y = 0
+	data["VolumeMusic"] = Glovar.Volumesavebug01.x
+	data["VolumeFx"] = Glovar.Volumesavebug01.y
 	$NG/Guardar.save_data()
 	#Fin
 	
