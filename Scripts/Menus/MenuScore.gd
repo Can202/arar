@@ -28,6 +28,7 @@ func _process(delta):
 
 
 func _on_exit_pressed():
+	$SFX/touch.play()
 	$black/AnimationPlayer.current_animation = "end"
 
 

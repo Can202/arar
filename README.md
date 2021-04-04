@@ -58,9 +58,3 @@ March 29th:
 March 30th:
 
 -Arar v0.6.1
-
-April 2nd:
-
--Arar v1.0
-
-

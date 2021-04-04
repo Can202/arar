@@ -240,7 +240,6 @@ position = Vector2( 5.15906, -3.96849 )
 rotation = 0.541052
 scale = Vector2( 2.5, 2.5 )
 frames = SubResource( 4 )
-animation = "click"
 frame = 4
 playing = true
 __meta__ = {

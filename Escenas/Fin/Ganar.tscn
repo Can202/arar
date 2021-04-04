@@ -328,8 +328,6 @@ shape = SubResource( 10 )
 [node name="Canvas" type="CanvasLayer" parent="."]
 
 [node name="black" type="Sprite" parent="Canvas"]
-visible = false
-modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 284, 144 )
 scale = Vector2( 9.875, 5.5 )
 texture = ExtResource( 3 )
