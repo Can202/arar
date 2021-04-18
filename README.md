@@ -65,3 +65,11 @@ April 2nd:
 -Arar v1.0
 
 
+April 3rd:
+
+-Arar v1.0.1
+
+
+April 4th:
+
+-Arar v1.0.2
