@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/github.png-b9d461eda3cd6b321a9992b66775447c.stex"
+path="res://.import/github.png-7d863c722a96a90751e364dede262487.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://docs/github.png"
-dest_files=[ "res://.import/github.png-b9d461eda3cd6b321a9992b66775447c.stex" ]
+source_file="res://docs/src/github.png"
+dest_files=[ "res://.import/github.png-7d863c722a96a90751e364dede262487.stex" ]
 
 [params]
 

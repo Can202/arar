@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/newgrounds.png-fea9dc176ecc3f3c814cae69737f56be.stex"
+path="res://.import/android.png-9a3c3c8c79e0c8fcf54346e4c8912d68.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://docs/src/newgrounds.png"
-dest_files=[ "res://.import/newgrounds.png-fea9dc176ecc3f3c814cae69737f56be.stex" ]
+source_file="res://docs/src/android.png"
+dest_files=[ "res://.import/android.png-9a3c3c8c79e0c8fcf54346e4c8912d68.stex" ]
 
 [params]
 

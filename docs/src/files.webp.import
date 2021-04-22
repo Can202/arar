@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/newgrounds.png-fea9dc176ecc3f3c814cae69737f56be.stex"
+path="res://.import/files.webp-7fc0a5f314e23291fe74515265becd2b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://docs/src/newgrounds.png"
-dest_files=[ "res://.import/newgrounds.png-fea9dc176ecc3f3c814cae69737f56be.stex" ]
+source_file="res://docs/src/files.webp"
+dest_files=[ "res://.import/files.webp-7fc0a5f314e23291fe74515265becd2b.stex" ]
 
 [params]
 
